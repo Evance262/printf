@@ -11,20 +11,18 @@ int _printf(const char *format, ...)
 {
 int print_c;
 
-print_t func[] = {
+identifierStruct func[] = {
 {"c", print_char},
-{"s", print_string},
+{"s", print_str},
 {"%", print_percent},
-{"d", print_integer},
-{"i", print_integer},
+{"d", print_int},
+{"i", print_int},
 {"b", print_binary},
-{"u", print_unsigned_integer},
-{"o", print_octal},
-{"x", print_lowerHex},
-{"X", print_upperHex},
-{"r", print_rev_string},
-{"R", print_print_rot13},
-{"p", print_pointer}
+{"u", print_unsigned},
+{"o", print_oct},
+{"x", print_hex},
+{"X", print_HEX},
+{NULL, NULL},
 }; 
 
 va_list list;
